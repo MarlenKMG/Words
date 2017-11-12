@@ -13,4 +13,8 @@ public class NewBehaviourScript : MonoBehaviour {
 	void Update () {
 		
 	}
+	// hello
+	void New () {
+
+	}
 }
