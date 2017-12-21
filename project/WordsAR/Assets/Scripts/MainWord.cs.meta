@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1177bd444c53c43a1bf99edada96b0b9
+timeCreated: 1512678755
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - catGO: {instanceID: 0}
+  - dogGO: {instanceID: 0}
+  - tigerGO: {instanceID: 0}
+  - wordUI: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

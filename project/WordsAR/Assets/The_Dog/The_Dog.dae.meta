@@ -1,0 +1,251 @@
+fileFormatVersion: 2
+guid: 2168255dea4e94c38841b4a3af55fe6c
+timeCreated: 1512670938
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: _000_DogHeadFur
+    100002: _001_DogHeadFur
+    100004: _002_DogBodyFur
+    100006: _003_DogBodyFur
+    100008: _004_DogHead
+    100010: _005_DogBody
+    100012: _006_DogEyes
+    100014: Armature
+    100016: ear_1_left
+    100018: ear_1_right
+    100020: ear_2_left
+    100022: ear_2_right
+    100024: head
+    100026: head_eyeball_left
+    100028: head_eyeball_right
+    100030: head_eyebrow_left
+    100032: head_eyebrow_right
+    100034: head_eyelid_lower_left
+    100036: head_eyelid_lower_right
+    100038: head_eyelid_upper_left
+    100040: head_eyelid_upper_right
+    100042: head_lip_upper_left
+    100044: head_lip_upper_right
+    100046: head_nose
+    100048: jaw
+    100050: leg_back_ankle_left
+    100052: leg_back_ankle_right
+    100054: leg_back_knee_left
+    100056: leg_back_knee_right
+    100058: leg_back_paw_left
+    100060: leg_back_paw_right
+    100062: leg_back_thigh_left
+    100064: leg_back_thigh_right
+    100066: leg_front_ankle_left
+    100068: leg_front_ankle_right
+    100070: leg_front_knee_left
+    100072: leg_front_knee_right
+    100074: leg_front_paw_left
+    100076: leg_front_paw_right
+    100078: leg_front_thigh_left
+    100080: leg_front_thigh_right
+    100082: neck
+    100084: pelvis
+    100086: root_ground
+    100088: root_hips
+    100090: spine_lower
+    100092: spine_upper
+    100094: tail_1
+    100096: tail_2
+    100098: tail_3
+    100100: tail_4
+    100102: tail_5
+    100104: tail_6
+    100106: //RootNode
+    100108: tongue_1
+    100110: tongue_2
+    100112: tongue_3
+    100114: tongue_4
+    400000: _000_DogHeadFur
+    400002: _001_DogHeadFur
+    400004: _002_DogBodyFur
+    400006: _003_DogBodyFur
+    400008: _004_DogHead
+    400010: _005_DogBody
+    400012: _006_DogEyes
+    400014: Armature
+    400016: ear_1_left
+    400018: ear_1_right
+    400020: ear_2_left
+    400022: ear_2_right
+    400024: head
+    400026: head_eyeball_left
+    400028: head_eyeball_right
+    400030: head_eyebrow_left
+    400032: head_eyebrow_right
+    400034: head_eyelid_lower_left
+    400036: head_eyelid_lower_right
+    400038: head_eyelid_upper_left
+    400040: head_eyelid_upper_right
+    400042: head_lip_upper_left
+    400044: head_lip_upper_right
+    400046: head_nose
+    400048: jaw
+    400050: leg_back_ankle_left
+    400052: leg_back_ankle_right
+    400054: leg_back_knee_left
+    400056: leg_back_knee_right
+    400058: leg_back_paw_left
+    400060: leg_back_paw_right
+    400062: leg_back_thigh_left
+    400064: leg_back_thigh_right
+    400066: leg_front_ankle_left
+    400068: leg_front_ankle_right
+    400070: leg_front_knee_left
+    400072: leg_front_knee_right
+    400074: leg_front_paw_left
+    400076: leg_front_paw_right
+    400078: leg_front_thigh_left
+    400080: leg_front_thigh_right
+    400082: neck
+    400084: pelvis
+    400086: root_ground
+    400088: root_hips
+    400090: spine_lower
+    400092: spine_upper
+    400094: tail_1
+    400096: tail_2
+    400098: tail_3
+    400100: tail_4
+    400102: tail_5
+    400104: tail_6
+    400106: //RootNode
+    400108: tongue_1
+    400110: tongue_2
+    400112: tongue_3
+    400114: tongue_4
+    4300000: _000_DogHeadFur
+    4300002: _001_DogHeadFur
+    4300004: _002_DogBodyFur
+    4300006: _003_DogBodyFur
+    4300008: _004_DogHead
+    4300010: _005_DogBody
+    4300012: _006_DogEyes
+    9500000: //RootNode
+    13700000: _000_DogHeadFur
+    13700002: _001_DogHeadFur
+    13700004: _002_DogBodyFur
+    13700006: _003_DogBodyFur
+    13700008: _004_DogHead
+    13700010: _005_DogBody
+    13700012: _006_DogEyes
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DogBodyFur__Dog_Body_D_tga
+    second: {fileID: 2100000, guid: f02c7271bb90f432381b9adeb1a9c1f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DogBodyFur__Dog_Body_D_tga_001
+    second: {fileID: 2100000, guid: f02c7271bb90f432381b9adeb1a9c1f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DogBody__Dog_Body_D_tga
+    second: {fileID: 2100000, guid: f02c7271bb90f432381b9adeb1a9c1f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DogEyes__Dog_Eyes_D_tga
+    second: {fileID: 2100000, guid: cbb8d9098085143ddaf19e1823b8645d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DogHeadFur__Dog_Head_D_tga
+    second: {fileID: 2100000, guid: 2426371d271fb4eeeb4b90bcad899424, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DogHeadFur__Dog_Head_D_tga_001
+    second: {fileID: 2100000, guid: 2426371d271fb4eeeb4b90bcad899424, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DogHead__Dog_Head_D_tga
+    second: {fileID: 2100000, guid: 2426371d271fb4eeeb4b90bcad899424, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
