@@ -17,6 +17,7 @@ namespace Vuforia
         #region PRIVATE_MEMBER_VARIABLES
  
         private TrackableBehaviour mTrackableBehaviour;
+		[SerializeField] private GameObject cam;
     
         #endregion // PRIVATE_MEMBER_VARIABLES
 
@@ -68,6 +69,15 @@ namespace Vuforia
 
         private void OnTrackingFound()
         {
+			cam.GetComponent<MainWord> ().Word = "";
+			transform.GetComponentInChildren<SetRay> ().NumberWord = -1;
+			/*if (cam.GetComponent<MainWord> ().Word [0] != null) {
+				string tmpS = "" + cam.GetComponent<MainWord> ().Word [0];
+				GameObject tmpGO = GameObject.Find (tmpS);
+				tmpGO.transform.GetComponentInChildren<SetRay> ().NumberWord = -1;
+			}*/
+
+
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
@@ -92,6 +102,8 @@ namespace Vuforia
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
+			cam.GetComponent<MainWord> ().Word = "show cubes";
+			transform.GetComponentInChildren<SetRay> ().NumberWord = -1;
             // Disable rendering:
             foreach (Renderer component in rendererComponents)
             {

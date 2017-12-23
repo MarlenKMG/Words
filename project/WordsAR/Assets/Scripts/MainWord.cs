@@ -9,9 +9,11 @@ public class MainWord : MonoBehaviour {
 	[SerializeField] private GameObject dogGO;
 	[SerializeField] private GameObject tigerGO;
 	[SerializeField] private Text wordUI;
-	public string Word = "show cubes";
+	[SerializeField] List<string> alf = new List<string>();
 
 	private string tmp = "";
+
+	public string Word = "show cubes";
 
 	void Start () {
 		
@@ -22,17 +24,20 @@ public class MainWord : MonoBehaviour {
 		if(tmp != Word) {
 			wordUI.text = Word;
 			tmp = Word;
-			if (Word == "CAT") {
+			//cat
+			if (Word == alf[0]) {
 				catGO.SetActive (true);
 			} else {
 				catGO.SetActive (false);
 			}
-			if (Word == "DOG") {
+			//dog
+			if (Word == alf[1]) {
 				dogGO.SetActive (true);
 			} else {
 				dogGO.SetActive (false);
 			}
-			if (Word == "AT") {
+			//tig
+			if (Word == alf[2]) {
 				tigerGO.SetActive (true);
 			} else {
 				tigerGO.SetActive (false);

@@ -11,6 +11,7 @@ public class SetRay : MonoBehaviour {
 	private int tmp = 0;
 
 	void Update(){
+		
 		RaycastHit hit;
 		RaycastHit hit1;
 		Ray rayRight = new Ray(transform.position, transform.right);
@@ -18,10 +19,9 @@ public class SetRay : MonoBehaviour {
 		if (Physics.Raycast(rayRight, out hit)) {
 			if (hit.transform.tag == "Char") {
 				if (!Physics.Raycast (rayLeft, out hit1)) {
-					if (NumberWord != 0 || hit.transform.GetComponent<SetRay> ().NumberWord != NumberWord+1) {
+					if (NumberWord != tmp){
+						//NumberWord != 0 || hit.transform.GetComponent<SetRay> ().NumberWord != NumberWord+1)
 						cameraGO.GetComponent<MainWord> ().Word = "";
-						print (transform.name);
-						print (hit.transform.name);
 						NumberWord = 0;
 						cameraGO.GetComponent<MainWord> ().Word = cameraGO.GetComponent<MainWord> ().Word + transform.name;
 						hit.transform.GetComponent<SetRay> ().NumberWord = NumberWord + 1;
@@ -29,19 +29,14 @@ public class SetRay : MonoBehaviour {
 						tmp = NumberWord;
 					} 
 				} else {
-					
 					if (NumberWord != tmp) {
-						hit.transform.GetComponent<SetRay> ().NumberWord = NumberWord + 1;
-						tmp = NumberWord;
+						hit.transform.GetComponent<SetRay> ().NumberWord = 2;
 						print (hit.transform.name);
 						cameraGO.GetComponent<MainWord> ().Word = cameraGO.GetComponent<MainWord> ().Word + hit.transform.name;
 					}
 				}
 			}
 		}
-		Transform objectHit = hit.transform;
-
-			// Do something with the object that was hit by the raycast.
 	}
 }
 
