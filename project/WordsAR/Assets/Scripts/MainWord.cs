@@ -9,11 +9,12 @@ public class MainWord : MonoBehaviour {
 	[SerializeField] private GameObject dogGO;
 	[SerializeField] private GameObject tigerGO;
 	[SerializeField] private Text wordUI;
+	[SerializeField] private GameObject sorryGO;
 	[SerializeField] List<string> alf = new List<string>();
 	[SerializeField] List<GameObject> chars = new List<GameObject>();
-	private string tmp = "";
 
-	public string Word = "show cubes";
+	private string tmp = "";
+	public string Word = "Show cubes";
 
 	void Start () {
 		
@@ -27,20 +28,30 @@ public class MainWord : MonoBehaviour {
 			//cat
 			if (Word == alf[0]) {
 				catGO.SetActive (true);
-			} else {
-				catGO.SetActive (false);
-			}
-			//dog
-			if (Word == alf[1]) {
-				dogGO.SetActive (true);
-			} else {
+				sorryGO.SetActive (false);
 				dogGO.SetActive (false);
-			}
-			//tig
-			if (Word == alf[2]) {
+				catGO.SetActive (false);
+				sorryGO.SetActive (false);
+			} else if (Word == alf[1]) {
+				//dog
+				dogGO.SetActive (false);
+				catGO.SetActive (false);
+				sorryGO.SetActive (false);
+				dogGO.SetActive (true);
+			} else if (Word == alf[2]) {
+				//tig
+				dogGO.SetActive (false);
+				catGO.SetActive (false);
+				sorryGO.SetActive (false);
 				tigerGO.SetActive (true);
 			} else {
 				tigerGO.SetActive (false);
+				dogGO.SetActive (false);
+				catGO.SetActive (false);
+				sorryGO.SetActive (false);
+				if (Word != "Show cubes") {
+					sorryGO.SetActive (true);
+				}
 			}
 		}
 	}
