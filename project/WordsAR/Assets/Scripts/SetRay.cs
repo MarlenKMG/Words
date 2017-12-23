@@ -14,35 +14,27 @@ public class SetRay : MonoBehaviour {
 	private RaycastHit hit1;
 	private Ray rayRight;
 	private Ray rayLeft;
+	private bool firstChar = false;
 
 	void Update(){
 		rayRight = new Ray(transform.position, transform.right);
 		rayLeft = new Ray(transform.position, -transform.right);
 		if (Physics.Raycast (rayRight, out hit)) {
-			if (hit.transform.tag == "Char") {
-				if (!Physics.Raycast (rayLeft, out hit1) && NumberWord != 0) {
+			if (hit.transform.tag == "Char" && NumberWord !=0) {
+				if (!Physics.Raycast (rayLeft, out hit1)) {
+					firstChar = true;
 					cameraGO.GetComponent<MainWord> ().Word = "";
 					NumberWord = 0;
 					cameraGO.GetComponent<MainWord> ().Word = "" + transform.name;
-					hit.transform.GetComponent<SetRay> ().NumberWord = NumberWord + 1;
-					cameraGO.GetComponent<MainWord> ().Word = cameraGO.GetComponent<MainWord> ().Word + hit.transform.name;
-					if (tmp != NumberWord) {
-						hit.transform.GetComponent<SetRay> ().addNewChar ();
-						tmp = NumberWord;
-					}
+					tmp = NumberWord;
 				}
 			}
 		}
-	}
-
-	public void addNewChar () {
-		tmp = NumberWord;
-		rayRight = new Ray (transform.position, transform.right);
 		if (Physics.Raycast (rayRight, out hit)) {
-			if (hit.transform.tag == "Char") {
-				hit.transform.GetComponent<SetRay> ().NumberWord = NumberWord + 1;
+			if (hit.transform.tag == "Char" && hit.transform.GetComponent<SetRay> ().NumberWord != NumberWord + 1) {
+				int tmpInt = NumberWord + 1;
+				hit.transform.GetComponent<SetRay> ().NumberWord = tmpInt;
 				cameraGO.GetComponent<MainWord> ().Word = cameraGO.GetComponent<MainWord> ().Word + hit.transform.name;
-				hit.transform.GetComponent<SetRay> ().addNewChar ();
 			}
 		}
 	}
