@@ -10,7 +10,7 @@ public class MainWord : MonoBehaviour {
 	[SerializeField] private GameObject tigerGO;
 	[SerializeField] private Text wordUI;
 	[SerializeField] List<string> alf = new List<string>();
-
+	[SerializeField] List<GameObject> chars = new List<GameObject>();
 	private string tmp = "";
 
 	public string Word = "show cubes";
@@ -43,7 +43,12 @@ public class MainWord : MonoBehaviour {
 				tigerGO.SetActive (false);
 			}
 		}
+	}
 
-		//uggu;
+	public void resetChars(){
+		Word = "Show cubes";
+		foreach (GameObject go in chars) {
+			go.GetComponent<SetRay> ().NumberWord = -1;
+		}
 	}
 }

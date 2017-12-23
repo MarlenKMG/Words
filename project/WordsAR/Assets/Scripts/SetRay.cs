@@ -8,33 +8,41 @@ public class SetRay : MonoBehaviour {
 
 	public int NumberWord = -1;
 
-	private int tmp = 0;
+	private int tmp = 200;
+
+	private RaycastHit hit;
+	private RaycastHit hit1;
+	private Ray rayRight;
+	private Ray rayLeft;
 
 	void Update(){
-		
-		RaycastHit hit;
-		RaycastHit hit1;
-		Ray rayRight = new Ray(transform.position, transform.right);
-		Ray rayLeft = new Ray(transform.position, -transform.right);
-		if (Physics.Raycast(rayRight, out hit)) {
+		rayRight = new Ray(transform.position, transform.right);
+		rayLeft = new Ray(transform.position, -transform.right);
+		if (Physics.Raycast (rayRight, out hit)) {
 			if (hit.transform.tag == "Char") {
-				if (!Physics.Raycast (rayLeft, out hit1)) {
-					if (NumberWord != tmp){
-						//NumberWord != 0 || hit.transform.GetComponent<SetRay> ().NumberWord != NumberWord+1)
-						cameraGO.GetComponent<MainWord> ().Word = "";
-						NumberWord = 0;
-						cameraGO.GetComponent<MainWord> ().Word = cameraGO.GetComponent<MainWord> ().Word + transform.name;
-						hit.transform.GetComponent<SetRay> ().NumberWord = NumberWord + 1;
-						cameraGO.GetComponent<MainWord> ().Word = cameraGO.GetComponent<MainWord> ().Word + hit.transform.name;
+				if (!Physics.Raycast (rayLeft, out hit1) && NumberWord != 0) {
+					cameraGO.GetComponent<MainWord> ().Word = "";
+					NumberWord = 0;
+					cameraGO.GetComponent<MainWord> ().Word = "" + transform.name;
+					hit.transform.GetComponent<SetRay> ().NumberWord = NumberWord + 1;
+					cameraGO.GetComponent<MainWord> ().Word = cameraGO.GetComponent<MainWord> ().Word + hit.transform.name;
+					if (tmp != NumberWord) {
+						hit.transform.GetComponent<SetRay> ().addNewChar ();
 						tmp = NumberWord;
-					} 
-				} else {
-					if (NumberWord != tmp) {
-						hit.transform.GetComponent<SetRay> ().NumberWord = 2;
-						print (hit.transform.name);
-						cameraGO.GetComponent<MainWord> ().Word = cameraGO.GetComponent<MainWord> ().Word + hit.transform.name;
 					}
 				}
+			}
+		}
+	}
+
+	public void addNewChar () {
+		tmp = NumberWord;
+		rayRight = new Ray (transform.position, transform.right);
+		if (Physics.Raycast (rayRight, out hit)) {
+			if (hit.transform.tag == "Char") {
+				hit.transform.GetComponent<SetRay> ().NumberWord = NumberWord + 1;
+				cameraGO.GetComponent<MainWord> ().Word = cameraGO.GetComponent<MainWord> ().Word + hit.transform.name;
+				hit.transform.GetComponent<SetRay> ().addNewChar ();
 			}
 		}
 	}
