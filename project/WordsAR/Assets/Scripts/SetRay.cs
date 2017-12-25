@@ -29,11 +29,8 @@ public class SetRay : MonoBehaviour {
 					tmp = NumberWord;
 				}
 			}
-		}
-		if (Physics.Raycast (rayRight, out hit)) {
 			if (hit.transform.tag == "Char" && hit.transform.GetComponent<SetRay> ().NumberWord != NumberWord + 1) {
-				int tmpInt = NumberWord + 1;
-				hit.transform.GetComponent<SetRay> ().NumberWord = tmpInt;
+				hit.transform.GetComponent<SetRay> ().NumberWord = NumberWord + 1;
 				cameraGO.GetComponent<MainWord> ().Word = cameraGO.GetComponent<MainWord> ().Word + hit.transform.name;
 			}
 		}

@@ -28,16 +28,15 @@ public class MainWord : MonoBehaviour {
 			//cat
 			if (Word == alf[0]) {
 				catGO.SetActive (true);
-				sorryGO.SetActive (false);
 				dogGO.SetActive (false);
-				catGO.SetActive (false);
+				tigerGO.SetActive (false);
 				sorryGO.SetActive (false);
 			} else if (Word == alf[1]) {
 				//dog
-				dogGO.SetActive (false);
+				dogGO.SetActive (true);
+				tigerGO.SetActive (false);
 				catGO.SetActive (false);
 				sorryGO.SetActive (false);
-				dogGO.SetActive (true);
 			} else if (Word == alf[2]) {
 				//tig
 				dogGO.SetActive (false);
@@ -61,5 +60,9 @@ public class MainWord : MonoBehaviour {
 		foreach (GameObject go in chars) {
 			go.GetComponent<SetRay> ().NumberWord = -1;
 		}
+	}
+
+	public void goToMainMenu() {
+		Application.LoadLevel (0);
 	}
 }
